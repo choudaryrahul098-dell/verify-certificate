@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certificate Verification</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-color: #fff;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <iframe id="app-frame" src=""></iframe>
+
+  <script>
+    // Replace this with your exact Google Apps Script Web App URL:
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzT7SHLvNs5Ggvz_J88bo5FUhTiv4uw5UzYc0jig22OEfzZPWQgceIPxxwmkqXSCdI8Mw/exec";
+
+    // Pass any URL parameters (like ?id=123) directly to the Apps Script
+    const currentParams = window.location.search;
+    document.getElementById("app-frame").src = SCRIPT_URL + currentParams;
+  </script>
+
+</body>
+</html>
